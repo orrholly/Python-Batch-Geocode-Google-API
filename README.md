@@ -32,3 +32,7 @@ https://www.jetbrains.com/help/pycharm/2016.1/installing-uninstalling-and-upgrad
 https://developers.google.com/maps/documentation/geocoding/intro  
 https://github.com/googlemaps/google-maps-services-python  
 
+### Converting json to csv in python  
+http://blog.appliedinformaticsinc.com/how-to-parse-and-convert-json-to-csv-using-python/  
+
+
