@@ -15,3 +15,10 @@ From: https://developers.google.com/maps/documentation/geocoding/get-api-key#get
 - Note: If you have an existing Server key, you may use that key.
 - To prevent quota theft, secure your API key following these best practices.
 - (Optional) Enable billing. See Usage Limits for more information.
+
+https://developers.google.com/maps/documentation/geocoding/start#policies  
+
+## Coding Examples using API Key
+https://developers.google.com/maps/documentation/geocoding/intro  
+https://github.com/googlemaps/google-maps-services-python  
+
