@@ -1,5 +1,6 @@
 # Geocode-Google-APIKey-Python
 Code and documentation for developing a python script to geocode more than 2500 records in Google using API.  
+Comes from this: https://github.com/googlemaps/google-maps-services-python
 
 ## Steps to get API Key and billing for Geocoding in Google  
 
@@ -28,9 +29,8 @@ https://developers.google.com/maps/documentation/geocoding/start#policies
 This is a pain in the ass:  
 https://www.jetbrains.com/help/pycharm/2016.1/installing-uninstalling-and-upgrading-packages.html#d127687e164  
 
-## Coding Examples using API Key
+## Google documentation
 https://developers.google.com/maps/documentation/geocoding/intro  
-https://github.com/googlemaps/google-maps-services-python  
 
 ### Converting json to csv in python  
 http://blog.appliedinformaticsinc.com/how-to-parse-and-convert-json-to-csv-using-python/  
