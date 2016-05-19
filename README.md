@@ -18,7 +18,21 @@ From: https://developers.google.com/maps/documentation/geocoding/get-api-key#get
 
 https://developers.google.com/maps/documentation/geocoding/start#policies  
 
+## Setting up Dev Environment  
+
+#### Install googlemaps module  
+
+    $ pip install -U googlemaps
+
+#### Setup Pycharm to see the module  
+This is a pain in the ass:  
+https://www.jetbrains.com/help/pycharm/2016.1/installing-uninstalling-and-upgrading-packages.html#d127687e164  
+
 ## Coding Examples using API Key
 https://developers.google.com/maps/documentation/geocoding/intro  
 https://github.com/googlemaps/google-maps-services-python  
+
+### Converting json to csv in python  
+http://blog.appliedinformaticsinc.com/how-to-parse-and-convert-json-to-csv-using-python/  
+
 
