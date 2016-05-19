@@ -14,7 +14,13 @@ gmaps = googlemaps.Client(key='AIzaSyDNpXx0jnXEWv1OHmdmTkOKPU72Ge1DOxk')
 
 # Geocoding an address - testing one address
 geocode_result = gmaps.geocode('1600 Amphitheatre Parkway, Mountain View, CA')
-print geocode_result
+#convert to json
+j = json.dumps(geocode_result)
+# print j['results']['geometry']['location']['lat']
+print j
+
+getLocation = json.loads(j)
+print getLocation [0]['geometry']['location']['lat']
 
 #print geocode_result[0]
 # jsonParsed = json.dumps(geocode_result)
