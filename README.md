@@ -35,4 +35,7 @@ https://developers.google.com/maps/documentation/geocoding/intro
 ### Converting json to csv in python  
 http://blog.appliedinformaticsinc.com/how-to-parse-and-convert-json-to-csv-using-python/  
 
+### Reading and writing to csv from json  
+https://automatetheboringstuff.com/chapter14/
+
 
