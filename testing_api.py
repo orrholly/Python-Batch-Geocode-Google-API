@@ -1,5 +1,8 @@
 import googlemaps
-import json, csv
+import json, csv, time
+import urllib2 as ul
+import pandas as pd
+import numpy as np
 
 from datetime import datetime
 
@@ -20,27 +23,30 @@ j = json.dumps(geocode_result)
 print j
 
 getLocation = json.loads(j)
-print getLocation [0]['geometry']['location']['lat']
-
-#print geocode_result[0]
-# jsonParsed = json.dumps(geocode_result)
-# print jsonParsed
-#convertJson = json.loads(geocode_result)
-# dict(x.split(':') for x in jsonParsed.split(':'))
+# print getLocation [0]['geometry']['location']['lat']
+latVal = getLocation [0]['geometry']['location']['lat']
 
 
+dict = {}
+dict.setdefault('latitude', []).append(latVal)
+print dict
+raw_data = dict
+df = pd.DataFrame(raw_data, columns = ['latitude'])
+df.to_csv('example.csv')
 
+# geocoding data stored in CSV
+#Holly updated to open the file in universal-newline mode
+# reader = csv.DictReader(open('api_test.csv', 'rU'), dialect=csv.excel_tab)
+# writer = csv.DictWriter(open('api_location.csv', 'wb'), fieldnames=reader.fieldnames+['latitude', 'longitude'])
+# writer.writeheader()
 
-#latParsed = convertJ
-# son['geometry'][0]['location']['lat']
-# print latParsed
-# latParsed = jsonParsed['lat']
-#print latParsed
-
-# Testing output
-#print geocode_result
-# print json.dumps(geocode_result, sort_keys=True, indent=4, separators=(',', ': '))
-#
-# with open('data.json', 'w') as outfile:
-#     json.dump(geocode_result, outfile)
+#read csv addresses
+# csvRows = []
+# csvFileObj = open('api_location.csv')
+# readerObj = csv.reader(csvFileObj)
+# for row in readerObj:
+#     if readerObj.line_num == 1:
+#         continue    # skip first row
+#     csvRows.append(row)
+# csvFileObj.close()
 
