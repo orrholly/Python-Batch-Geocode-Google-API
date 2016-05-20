@@ -15,6 +15,7 @@ from datetime import datetime
 #Client key for google maps
 gmaps = googlemaps.Client(key='AIzaSyDNpXx0jnXEWv1OHmdmTkOKPU72Ge1DOxk')
 
+addressString = '1600 Amphitheatre Parkway, Mountain View, CA'
 # Geocoding an address - testing one address
 geocode_result = gmaps.geocode('1600 Amphitheatre Parkway, Mountain View, CA')
 #convert to json
@@ -28,11 +29,12 @@ latVal = getLocation [0]['geometry']['location']['lat']
 
 
 dict = {}
+dict.setdefault('address', []).append(addressString)
 dict.setdefault('latitude', []).append(latVal)
 print dict
 raw_data = dict
-df = pd.DataFrame(raw_data, columns = ['latitude'])
-df.to_csv('example.csv')
+df = pd.DataFrame(raw_data, columns = ['address', 'latitude'])
+df.to_csv('example3.csv')
 
 # geocoding data stored in CSV
 #Holly updated to open the file in universal-newline mode
