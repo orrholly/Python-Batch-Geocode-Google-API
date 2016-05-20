@@ -38,19 +38,5 @@ raw_data = dict
 df = pd.DataFrame(raw_data, columns = ['address', 'latitude'])
 df.to_csv('example3.csv')
 
-# geocoding data stored in CSV
-#Holly updated to open the file in universal-newline mode
-# reader = csv.DictReader(open('api_test.csv', 'rU'), dialect=csv.excel_tab)
-# writer = csv.DictWriter(open('api_location.csv', 'wb'), fieldnames=reader.fieldnames+['latitude', 'longitude'])
-# writer.writeheader()
 
-#read csv addresses
-# csvRows = []
-# csvFileObj = open('api_location.csv')
-# readerObj = csv.reader(csvFileObj)
-# for row in readerObj:
-#     if readerObj.line_num == 1:
-#         continue    # skip first row
-#     csvRows.append(row)
-# csvFileObj.close()
 
