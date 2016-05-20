@@ -7,17 +7,19 @@ import numpy as np
 from datetime import datetime
 
 
-# gmaps = googlemaps.Client(key='AIzaSyDNpXx0jnXEWv1OHmdmTkOKPU72Ge1DOxk')
-# address = 'Constitution Ave NW & 10th St NW, Washington, DC'
-# lat, lng = gmaps.address_to_latlng(address)
-# print lat, lng
-
 #Client key for google maps
 gmaps = googlemaps.Client(key='AIzaSyDNpXx0jnXEWv1OHmdmTkOKPU72Ge1DOxk')
 
+#TESTING
+# testing hardcoded address string
 addressString = '1600 Amphitheatre Parkway, Mountain View, CA'
-# Geocoding an address - testing one address
+
+# Testing Geocoding an address - testing one address
 geocode_result = gmaps.geocode('1600 Amphitheatre Parkway, Mountain View, CA')
+
+#read csv address
+
+
 #convert to json
 j = json.dumps(geocode_result)
 # print j['results']['geometry']['location']['lat']
