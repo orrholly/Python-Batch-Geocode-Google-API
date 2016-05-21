@@ -5,58 +5,58 @@ import pandas as pd
 import numpy as np
 
 from datetime import datetime
-fields = ['address']
-
-df = pd.read_csv('api_test.csv', skipinitialspace=True, usecols=fields)
-
-# for r in df.itertuples():
-#     print(r)
-
-for index, row in df.iterrows():
-    print row['address']
-    addressValue = row['address']
-# See the keys
-# print df.keys()
-# See content in 'star_name'
-# print df.address
-# addressValue = df.get_value(0,'address')
-# print addressValue
-
 
 #Client key for google maps
 gmaps = googlemaps.Client(key='AIzaSyDNpXx0jnXEWv1OHmdmTkOKPU72Ge1DOxk')
+
+#global for dictionary
+dict = {}
+
+#read csv address
+fields = ['address']
+df = pd.read_csv('warning_two.csv', skipinitialspace=True, usecols=fields)
+
+#this might be faster - keep until later
+# for r in df.itertuples():
+#     print(r)
+
+# See content in 'address' - keep in case
+# addressValue = df.get_value(0,'address')
+# print addressValue
 
 #TESTING
 # testing hardcoded address string
 # addressString = '1600 Amphitheatre Parkway, Mountain View, CA'
 
-# Geocoding an address - testing one address
-geocode_result = gmaps.geocode(addressValue)
+#iterate through rows
+for index, row in df.iterrows():
+    print row['address']
+    addressValue = row['address']
 
-#read csv address
+    # Geocoding an address - testing one address
+    geocode_result = gmaps.geocode(addressValue)
+
+    #convert to json
+    j = json.dumps(geocode_result)
+    # print j['results']['geometry']['location']['lat']
+    # print j
+
+    getLocation = json.loads(j)
+
+    #grab latitude and longitude from json
+    longVal = getLocation [0]['geometry']['location']['lng']
+    #print longVal
+    latVal = getLocation [0]['geometry']['location']['lat']
+    # print latVal
+
+    #create dictionary from address, long, and lat
+    dict.setdefault('address', []).append(addressValue)
+    dict.setdefault('longitude', []).append(longVal)
+    dict.setdefault('latitude', []).append(latVal)
 
 
-#convert to json
-j = json.dumps(geocode_result)
-# print j['results']['geometry']['location']['lat']
-print j
-
-getLocation = json.loads(j)
-
-#grab latitude and longitude from json
-longVal = getLocation [0]['geometry']['location']['lng']
-#print longVal
-latVal = getLocation [0]['geometry']['location']['lat']
-# print latVal
-
-
-#create dictionary from address, long, and lat
-dict = {}
-dict.setdefault('address', []).append(addressValue)
-dict.setdefault('longitude', []).append(longVal)
-dict.setdefault('latitude', []).append(latVal)
-
-print dict
+#output all values to csv
+# print dict
 raw_data = dict
 df = pd.DataFrame(raw_data, columns = ['address', 'longitude', 'latitude'])
 df.to_csv('example.csv')
