@@ -8,12 +8,19 @@ from datetime import datetime
 fields = ['address']
 
 df = pd.read_csv('api_test.csv', skipinitialspace=True, usecols=fields)
+
+# for r in df.itertuples():
+#     print(r)
+
+for index, row in df.iterrows():
+    print row['address']
+    addressValue = row['address']
 # See the keys
 # print df.keys()
 # See content in 'star_name'
 # print df.address
-addressValue = df.get_value(0,'address')
-print addressValue
+# addressValue = df.get_value(0,'address')
+# print addressValue
 
 
 #Client key for google maps
@@ -23,7 +30,7 @@ gmaps = googlemaps.Client(key='AIzaSyDNpXx0jnXEWv1OHmdmTkOKPU72Ge1DOxk')
 # testing hardcoded address string
 # addressString = '1600 Amphitheatre Parkway, Mountain View, CA'
 
-# Geocoding an address - testing address read from csv
+# Geocoding an address - testing one address
 geocode_result = gmaps.geocode(addressValue)
 
 #read csv address
@@ -52,7 +59,7 @@ dict.setdefault('latitude', []).append(latVal)
 print dict
 raw_data = dict
 df = pd.DataFrame(raw_data, columns = ['address', 'longitude', 'latitude'])
-df.to_csv('example3.csv')
+df.to_csv('example.csv')
 
 
 
