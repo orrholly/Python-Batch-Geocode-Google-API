@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d252731c-d066-47f3-aebd-b38a08e29782" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testing_api.py" afterPath="$PROJECT_DIR$/testing_api.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/warning_two.csv" afterPath="$PROJECT_DIR$/warning_two.csv" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warning_one.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warning_three_bad.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warning_two.csv" afterPath="" />
     </list>
     <ignored path="Geocode-Google-APIKey-Python.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,44 +25,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="testing_api.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/testing_api.py">
+      <file leaf-file-name="google_geocode_nyu.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/google_geocode_nyu.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.1256684">
-              <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.8977556">
+              <caret line="64" column="25" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
               <folding>
-                <element signature="e#0#17#0" expanded="true" />
+                <element signature="e#441#458#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="geocoding.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/_usr_local_lib_python2.7/lib/python2.7/site-packages/googlemaps/geocoding.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="client.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/_usr_local_lib_python2.7/lib/python2.7/site-packages/googlemaps/client.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="224" column="0" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -86,6 +57,7 @@
         <option value="/usr/local/lib/python2.7/site-packages/googlemaps/geocoding.py" />
         <option value="$USER_HOME$/_usr_local_lib_python2.7/lib/python2.7/site-packages/googlemaps/geocoding.py" />
         <option value="$PROJECT_DIR$/testing_api.py" />
+        <option value="$PROJECT_DIR$/google_geocode_nyu.py" />
       </list>
     </option>
   </component>
@@ -657,10 +629,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/testing_api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.1256684">
+        <state vertical-scroll-proportion="14.444445">
           <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/google_geocode_nyu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8977556">
+          <caret line="64" column="25" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
+          <folding>
+            <element signature="e#441#458#0" expanded="true" />
           </folding>
         </state>
       </provider>
