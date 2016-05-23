@@ -5,7 +5,7 @@ Author: Holly Orr
 Date: 5/19/2016
 
 Description: Uses googlemaps package to apply Google API key when requests exceed Google's
-2500 daily limit. Reads id and addresses from csv and writes id, addresses, lat and long to
+2500 daily limit. Reads fda_id and addresses from csv and writes fda_id, addresses, lat and long to
 a new csv.
 
 googlemaps from https://github.com/googlemaps/google-maps-services-python
@@ -18,14 +18,14 @@ import json, csv, time
 import urllib2 as ul
 import pandas as pd
 import numpy as np
-from datetime import datetime
+import datetime
 
 # Global Variables*********************************
 
 #csv to read from
-inCSV = 'allwarnings_dc_nc_va.csv'
+inCSV = 'address_7001_end.csv'
 #csv to write to
-outCSV = 'geocode_south.csv'
+outCSV = 'geocode_7001_end.csv'
 
 #Client key for google maps
 gmaps = googlemaps.Client(key='AIzaSyDNpXx0jnXEWv1OHmdmTkOKPU72Ge1DOxk')
@@ -33,12 +33,17 @@ gmaps = googlemaps.Client(key='AIzaSyDNpXx0jnXEWv1OHmdmTkOKPU72Ge1DOxk')
 #Dictionary
 dict = {}
 
+# get run start time
+start = datetime.datetime.now()
+print "Start time: " + str(start)
+
 #read csv address
-fields = ['address']
+fields = ['fda_id', 'address']
 df = pd.read_csv(inCSV, skipinitialspace=True, usecols=fields)
 
 #iterate through rows of read csv
 for index, row in df.iterrows():
+    idValue = row['fda_id']
     addressValue = row['address']
 
     # Geocode address
@@ -57,15 +62,18 @@ for index, row in df.iterrows():
         latVal = getLocation [0]['geometry']['location']['lat']
 
     #create dictionary from address, long, and lat
+    dict.setdefault('fda_id', []).append(idValue)
     dict.setdefault('address', []).append(addressValue)
     dict.setdefault('longitude', []).append(longVal)
     dict.setdefault('latitude', []).append(latVal)
-    print addressValue, longVal, latVal
+    print idValue, addressValue, longVal, latVal
 
 #output all values to csv
 raw_data = dict
-df = pd.DataFrame(raw_data, columns = ['address', 'longitude', 'latitude'])
-df.to_csv('outCSV')
+df = pd.DataFrame(raw_data, columns = ['fda_id','address', 'longitude', 'latitude'])
+df.to_csv(outCSV)
 
-
+# get run end time
+done = datetime.datetime.now()
+print "End time: " + str(done)
 
