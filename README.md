@@ -25,8 +25,7 @@ https://developers.google.com/maps/documentation/geocoding/start#policies
 
     $ pip install -U googlemaps
 
-#### Setup Pycharm to see the module  
-This is a pain in the ass:  
+#### Setup Pycharm to see the module    
 https://www.jetbrains.com/help/pycharm/2016.1/installing-uninstalling-and-upgrading-packages.html#d127687e164  
 
 ## Google documentation
