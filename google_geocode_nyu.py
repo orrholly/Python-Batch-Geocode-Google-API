@@ -28,7 +28,7 @@ inCSV = 'address_7001_end.csv'
 outCSV = 'geocode_7001_end.csv'
 
 #Client key for google maps
-gmaps = googlemaps.Client(key='put your key here')
+gmaps = googlemaps.Client(key='put your API key here')
 
 #Dictionary
 dict = {}
