@@ -25,8 +25,9 @@ https://developers.google.com/maps/documentation/geocoding/start#policies
 
     $ pip install -U googlemaps
 
-#### Setup Pycharm to see the module    
-https://www.jetbrains.com/help/pycharm/2016.1/installing-uninstalling-and-upgrading-packages.html#d127687e164  
+###Virtual envirnoment for packages
+https://www.jetbrains.com/help/pycharm/2016.1/adding-existing-virtual-environment.html
+http://docs.python-guide.org/en/latest/dev/virtualenvs/
 
 ## Google documentation
 https://developers.google.com/maps/documentation/geocoding/intro  
@@ -37,4 +38,15 @@ http://blog.appliedinformaticsinc.com/how-to-parse-and-convert-json-to-csv-using
 ### Reading and writing to csv from json  
 https://automatetheboringstuff.com/chapter14/
 
+###pandas and csv writing
+https://www.safaribooksonline.com/library/view/python-cookbook/0596001673/ch01s06.html
+http://chrisalbon.com/python/pandas_dataframe_importing_csv.html
 
+##Time to run 3500 records
+Start time: 2016-05-22 21:28:41.408059
+End time: 2016-05-22 21:45:47.507958
+34 minutes
+
+###Google API  
+Go to Google API Dashboard
+account: ho449@nyu.edu
